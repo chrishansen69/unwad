@@ -3,6 +3,6 @@ language: cpp
 script: 
  - mv ./tools/filechars.cpp ./filechars.cpp
  - mv ./src/unwad.cpp ./unwad.cpp
- - mkdir /usr/lib/
- - mv ./lib/*.dll.a /usr/lib/
+# - mkdir /usr/lib/
+# - mv ./lib/*.dll.a /usr/lib/
  - sh build.sh
