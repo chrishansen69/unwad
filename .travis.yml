@@ -1,3 +1,7 @@
 language: cpp
 
-script: sh build.sh
+script: 
+ - mv ./tools/filechars.cpp ./filechars.cpp
+ - mv ./src/unwad.cpp ./unwad.cpp
+ - mv ./lib/*.dll.a /usr/lib/*.dll.a
+ - sh build.sh
