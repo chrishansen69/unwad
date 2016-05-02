@@ -10,6 +10,7 @@ minizip.c miniunz.c zip.c unzip.c ioapi.c
 cd ../..
 
 g++ -Wall \
+-L./lib
 -I./include/pngpp -I./include \
 unwad.cpp qmus2mid.cpp \
 include/minizip/minizip.o include/minizip/ioapi.o include/minizip/zip.o include/minizip/unzip.o \
@@ -21,6 +22,7 @@ strip unwad
 echo building unwad.static
 
 g++ -Wall \
+-L./lib
 -I./include/pngpp -I./include \
 unwad.cpp qmus2mid.cpp \
 include/minizip/minizip.o include/minizip/ioapi.o include/minizip/zip.o include/minizip/unzip.o \
