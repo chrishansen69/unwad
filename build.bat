@@ -22,7 +22,7 @@ if not errorlevel 0 (
 
 cd ..\..
 
-g++ -Wall -DMSW=1 unwad.cpp qmus2mid.cpp -I./include -I./include/pngpp -Ldll -lmagic1 -lzlib1 -lregex2 -llibpng13  -o unwad.exe
+g++ -Wall -DMSW=1 unwad.cpp qmus2mid.cpp -I./include -I./include/pngpp -I./include/minizip -Ldll -lmagic1 -lzlib1 -lregex2 -llibpng13  -o unwad.exe
 if not errorlevel 0 (
 	pause
 	exit 1
