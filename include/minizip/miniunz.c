@@ -92,11 +92,15 @@ int mymkdir(dirname)
 {
     int ret=0;
 #ifdef WIN32
-    ret = mkdir(dirname);
+   #ifdef __CYGWIN__
+       ret = mkdir (dirname,0775);
+   #else
+       ret = mkdir(dirname);
+   #endif
 #else
-#ifdef unix
-    ret = mkdir (dirname,0775);
-#endif
+   #ifdef unix
+       ret = mkdir (dirname,0775);
+   #endif
 #endif
     return ret;
 }
