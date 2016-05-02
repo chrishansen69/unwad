@@ -8,6 +8,10 @@
   #include <sys/stat.h>   // for mkdir
 #endif
 
+#ifdef __CYGWIN__
+  #include <sys/dir.h>
+#endif
+
 #include <sys/types.h>
 
 #include "png.hpp"  // make pngs
@@ -81,7 +85,7 @@ std::map<std::string, bool> Zip::seenFiles;
    bool Filesystem::makeDir(std::string path)
   {
     // if (system(("mkdir " + path).c_str()))
-#ifdef MSW
+#if defined(MSW) && !defined(__CYGWIN__)
     if( mkdir( path.c_str() ) == 0 ) return true;
 #else
     if( mkdir( path.c_str(), 0777 ) == 0 ) return true;
