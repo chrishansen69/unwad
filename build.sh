@@ -7,9 +7,9 @@ g++ filechars.cpp -o filechars
 ./filechars readme.txt
 rm filechars
 
-./build-linux.sh
+./build-linux.sh || exit 1
 
-./cross-compile.sh
+./cross-compile.sh || exit 1
 
 rm *.txt.h
 
