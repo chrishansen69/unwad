@@ -4,12 +4,8 @@
 #include <fstream>
 #include <sstream> // string stream
 
-#ifndef MSW
+#if defined(__CYGWIN__) || !defined(MSW)
   #include <sys/stat.h>   // for mkdir
-#endif
-
-#ifdef __CYGWIN__
-  #include <sys/dir.h>
 #endif
 
 #include <sys/types.h>
