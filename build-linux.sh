@@ -14,7 +14,7 @@ g++ -Wall \
 unwad.cpp qmus2mid.cpp \
 include/minizip/minizip.o include/minizip/ioapi.o include/minizip/zip.o include/minizip/unzip.o \
 -lmagic -lpng -lz \
--o unwad
+-o unwad || exit 1
 
 strip unwad
 
@@ -25,7 +25,7 @@ g++ -Wall \
 unwad.cpp qmus2mid.cpp \
 include/minizip/minizip.o include/minizip/ioapi.o include/minizip/zip.o include/minizip/unzip.o \
 lib/libmagic.a lib/libpng.a lib/libz.a \
--o unwad.static
+-o unwad.static || exit 1
 
 strip unwad.static
 
