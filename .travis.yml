@@ -5,6 +5,7 @@ script:
  - mv ./include/qmus2mid/qmus2mid.cpp ./qmus2mid.cpp
  - mv ./include/qmus2mid/qmus2mid.h ./include/qmus2mid.h
  - mv ./src/unwad.cpp ./unwad.cpp
+ - mv ./lib/*.dll.a ./lib/*.a
 # - mkdir /usr/lib/
 # - mv ./lib/*.dll.a /usr/lib/
  - sh build.sh
