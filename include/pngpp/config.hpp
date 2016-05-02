@@ -36,7 +36,7 @@
 
 #include <endian.h>
 
-#elif defined(__WIN32) || defined(_WIN32)
+#elif defined(__WIN32) || defined(_WIN32) || defined(__CYGWIN__)
 
 #define	__LITTLE_ENDIAN	1234
 #define	__BIG_ENDIAN	4321
