@@ -13,5 +13,5 @@ script:
 - gcc -c -O2 -I./include -I.. minizip.c miniunz.c zip.c unzip.c ioapi.c
 - cd ../..
 #echo Compiling Unwad
-- g++ -Wall -DMSW=1 -O2 -I./include -I./include/pngpp src/unwad.cpp include/qmus2mid/qmus2mid.cpp include/minizip/minizip.o include/minizip/ioapi.o include/minizip/zip.o include/minizip/unzip.o ./lib/libregex.dll.a ./lib/libmagic.dll.a ./lib/libpng.dll.a ./lib/libz.dll.a -o unwad
+- g++ -Wall -O2 -I./include -I./include/pngpp src/unwad.cpp include/qmus2mid/qmus2mid.cpp include/minizip/minizip.o include/minizip/ioapi.o include/minizip/zip.o include/minizip/unzip.o ./lib/libregex.dll.a ./lib/libmagic.dll.a ./lib/libpng.dll.a ./lib/libz.dll.a -o unwad
 - strip unwad
