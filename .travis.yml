@@ -5,6 +5,7 @@ script:
 - g++ -O2 -o filechars tools/filechars.cpp
 #- mv ./tools/filechars ./filechars
 - strip filechars
+- ls -l
 - ./filechars readme.txt
 - cp readme.txt.h include/readme.txt.h
 #echo Compiling MiniZip
