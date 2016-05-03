@@ -1,3 +1,4 @@
 language: cpp
 
-script: build/mingw-build.sh
+script: 
+- sh ./build/mingw-build.sh
