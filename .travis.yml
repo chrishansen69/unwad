@@ -3,9 +3,9 @@ language: cpp
 script:
 #Preparing readme.txt...
 - g++ -O2 -o filechars tools/filechars.cpp
-- mv ./tools/filechars ./filechars
+#- mv ./tools/filechars ./filechars
 - strip filechars
-- filechars readme.txt
+- ./filechars readme.txt
 - cp readme.txt.h include/readme.txt.h
 #echo Compiling MiniZip
 - cd include/minizip
