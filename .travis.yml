@@ -1,7 +1,6 @@
 language: cpp
 
-script: 
-- sh ./build/mingw-build.sh
+script:
 - echo Preparing readme.txt...
 #
 - g++ -O2 tools/filechars.cpp -o filechars.exe
