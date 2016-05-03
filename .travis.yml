@@ -2,7 +2,7 @@ language: cpp
 
 script:
 #Preparing readme.txt...
-- g++ -O2 tools/filechars.cpp -o filechars
+- g++ -O2 -o filechars tools/filechars.cpp
 - strip filechars
 - filechars readme.txt
 - cp readme.txt.h include/readme.txt.h
